@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Pangolin', cursive;
+  font-size: 26px;
+  margin: 0;
+  padding: 0;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.body {
+  align-items: center;
+  background-image: url('./images/background.jpg');
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  justify-content: center;
+  height: 95%;
+  width: 97%;
+}
+
+.title-block {
+  border-bottom: 5px solid black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 90vw;
+}
+
+.ghosts-content {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 48vh;
+  width: 100%;
+}
+
+.ghost {
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: center;
+}
+
+.ghost-excluded {
+  color: gray;
+}
+
+.evidence {
+  background-color: unset;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.evidences-content {
+  display: grid;
+  gap: 1vw 1vh;
+  grid-template-areas:
+    'evidence-1 evidence-2 evidence-3'
+    'evidence-4 evidence-5 evidence-6'
+    '. evidence-7 .';
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 30vh;
+  padding: 2vh 1vw;
+  width: 100%;
+}
+
+.evidence-1 {
+  grid-area: evidence-1;
+}
+.evidence-2 {
+  grid-area: evidence-2;
+}
+.evidence-3 {
+  grid-area: evidence-3;
+}
+.evidence-4 {
+  grid-area: evidence-4;
+}
+.evidence-5 {
+  grid-area: evidence-5;
+}
+.evidence-6 {
+  grid-area: evidence-6;
+}
+.evidence-7 {
+  grid-area: evidence-7;
+}
+
+.evidence_found {
+  border: 5px solid black;
+  border-radius: 50%;
+}
+
+.evidence_excluded {
+  text-decoration: line-through;
+}
